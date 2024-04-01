@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
-import { IBookPreview } from 'shared/api'
+import { IBookPreview } from 'shared/api/book'
 import defaultImage from 'shared/assets/images/defaultImage.png'
 import { PRICE_OF_FREE_BOOK } from 'shared/consts'
 import { LoaderImage } from 'shared/ui/loaders/loaderImage'

@@ -1,1 +1,0 @@
-export { ProductСategory } from './productСategory'

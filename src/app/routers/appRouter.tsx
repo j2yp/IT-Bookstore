@@ -15,10 +15,22 @@ import { Categories } from 'pages/categories'
 import { Category } from 'pages/category'
 import { HomePage } from 'pages/homePage'
 import { SearchResults } from 'pages/searchResults'
-import { getCategoryNameByLink, useAppSelector } from 'shared/lib'
+import { CATEGORIES } from 'shared/consts'
+import { useAppSelector } from 'shared/lib/store'
 import { Fallback } from 'shared/ui/fallback'
 
 import '../styles/index.scss'
+
+const getCategoryNameByLink = (link?: string): string | undefined => {
+    for (const values of Object.values(CATEGORIES)) {
+        const findEl = values.find((item) => item.link === link)
+
+        if (findEl) {
+            return findEl.title
+        }
+    }
+    return undefined
+}
 
 /** Dynamic path parameter types for breadcrumbs. */
 interface IParamsDynamicPath {

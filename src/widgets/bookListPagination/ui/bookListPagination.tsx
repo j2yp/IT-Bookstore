@@ -3,7 +3,7 @@ import ResponsivePagination from 'react-responsive-pagination'
 import clsx from 'clsx'
 import { BookPreview } from 'entities/book/bookPreview'
 import { AddToCart } from 'features/cart'
-import { IBookPreview } from 'shared/api'
+import { IBookPreview } from 'shared/api/book'
 import {
     MAXIMUM_NUMBER_OF_PAGES,
     NUMBER_ELEMENTS_ON_PAGINATION_PAGE,

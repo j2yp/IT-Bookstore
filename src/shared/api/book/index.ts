@@ -1,2 +1,2 @@
-export * from './book'
-export * from './types'
+export { getBook } from './book'
+export { type IBookDescription, type IBookPreview } from './types'

@@ -1,2 +1,2 @@
-export * from './lib'
-export * from './ui'
+export { usePaginationBooks } from './lib/usePaginatonBooks'
+export { BookListPagination } from './ui/bookListPagination'

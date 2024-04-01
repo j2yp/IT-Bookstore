@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import clsx from 'clsx'
-import { Authors } from 'entities/authors'
+import { Author } from 'entities/author'
 import { selectBookDescriptionBook } from 'entities/book/bookDescripton'
 import { AddToCart } from 'features/cart'
 import defaultImageBook from 'shared/assets/images/defaultImage.png'
 import { PRICE_OF_FREE_BOOK } from 'shared/consts'
-import { useAppSelector } from 'shared/lib'
+import { useAppSelector } from 'shared/lib/store'
 import { LoaderImage } from 'shared/ui/loaders/loaderImage'
 import { Price } from 'shared/ui/price'
 import { Rating } from 'shared/ui/rating'
@@ -133,7 +133,7 @@ export const BookDetails = () => {
                 </div>
 
                 <div className='book-details__wrapper-authors'>
-                    <Authors authors={authorsArr} />
+                    <Author authors={authorsArr} />
                 </div>
             </div>
 

@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { getPreviewCategory, IBookPreview } from 'shared/api'
+import { IBookPreview } from 'shared/api/book'
+import { getPreviewCategory } from 'shared/api/category'
 import { ErrorType, RejectedDataType } from 'shared/types'
 
 interface ResponseType {

@@ -9,7 +9,8 @@ import {
     selectSearchError,
     selectSearchLoading,
 } from 'features/search'
-import { useAppDispatch, useAppSelector, useDebounce } from 'shared/lib'
+import { useDebounce } from 'shared/lib/debounce'
+import { useAppDispatch, useAppSelector } from 'shared/lib/store'
 import { Dropdown } from 'shared/ui/dropdown'
 import { Input } from 'shared/ui/input'
 

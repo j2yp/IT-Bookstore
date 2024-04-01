@@ -13,4 +13,106 @@
     &__footer {
         flex: 0 0 auto;
     }
+
+    &__toggle-theme {
+        position: fixed;
+        bottom: 30px;
+        right: 40px;
+
+        width: 45px;
+        height: 45px;
+
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px var(--border);
+        transition: 0.2s linear all;
+
+        z-index: 10;
+    }
+
+    &__icon {
+        top: 50%;
+        transform: translate(0, -50%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__toggle-theme.light {
+        background-color: var(--primary-bg);
+    }
+
+    &__toggle-theme.dark {
+        background-color: var(--black);
+    }
+
+    &__navigation-menu {
+        width: 100%;
+        background: var(--light);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    &__navigation-menu_sticky {
+        .layout__navigation-menu-btn-wrapper {
+            opacity: 1;
+        }
+    }
+
+    &__navigation-menu-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__navigation-menu-list {
+        display: flex;
+        padding: 0;
+        gap: 40px;
+    }
+
+    &__navigation-menu-item {
+        margin: 28px 0;
+    }
+
+    &__navigation-menu-btn-wrapper {
+        display: flex;
+        gap: 30px;
+        opacity: 0;
+
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__navigation-menu-button {
+        .icon-button__icon {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    &__navigation-menu-link {
+        color: var(--text-primary);
+        font-size: 14px;
+
+        padding-bottom: 10px;
+
+        cursor: pointer;
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--red);
+            background-size: 100% 2px;
+        }
+
+        &_active {
+            color: var(--dark-red);
+            background-size: 100% 2px;
+        }
+    }
 }

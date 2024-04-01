@@ -1,4 +1,4 @@
-import { IBookPreview } from 'shared/api'
+import { IBookPreview } from 'shared/api/book'
 import { RejectedDataType } from 'shared/types'
 
 export interface IBookPreviewState {

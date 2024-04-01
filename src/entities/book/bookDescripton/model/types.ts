@@ -1,4 +1,4 @@
-import { IBookDescription } from 'shared/api'
+import { IBookDescription } from 'shared/api/book'
 import { RejectedDataType } from 'shared/types'
 
 export interface IBookDescriptionState {

@@ -6,7 +6,7 @@ import {
     selectBookListTotalCountBooks,
 } from 'entities/book/bookList'
 import { NUMBER_OF_RETURNED_API_ELEMENTS } from 'shared/consts'
-import { useAppDispatch, useAppSelector } from 'shared/lib/hooks/redux'
+import { useAppDispatch, useAppSelector } from 'shared/lib/store'
 
 interface UsePaginatonBooksResults {
     readonly currentPage: number

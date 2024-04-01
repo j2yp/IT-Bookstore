@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { getResultsSearch, IResultsSearch } from 'shared/api'
+import { getResultsSearch, IResultsSearch } from 'shared/api/search'
 import { ErrorType, RejectedDataType } from 'shared/types'
 
 interface IFetchSearch {

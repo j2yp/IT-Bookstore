@@ -1,2 +1,2 @@
-export * from './category'
-export * from './types'
+export { getPreviewCategory } from './category'
+export { type IPreviewCategory } from './types'

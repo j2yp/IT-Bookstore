@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { getBook, IBookDescription } from 'shared/api'
+import { getBook, IBookDescription } from 'shared/api/book'
 import { ErrorType, RejectedDataType } from 'shared/types'
 
 export const fetchBookDescription = createAsyncThunk<

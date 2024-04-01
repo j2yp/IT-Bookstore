@@ -3,7 +3,7 @@ import { toast } from 'react-toastify'
 import { addToCart, ICartItem } from 'entities/cart'
 import Bag from 'shared/assets/icons/bag.svg?react'
 import { SUCCESSFUL_ADDING } from 'shared/consts'
-import { useAppDispatch } from 'shared/lib'
+import { useAppDispatch } from 'shared/lib/store'
 import { Button } from 'shared/ui/button'
 
 interface IAddToCart {
