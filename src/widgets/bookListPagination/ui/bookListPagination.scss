@@ -48,3 +48,18 @@
         margin: 0 auto;
     }
 }
+
+@media (max-width: 576px) {
+    .book-list-pagination {
+        &__content {
+            row-gap: 15px;
+            column-gap: 10px;
+
+            margin-bottom: 20px;
+        }
+
+        &__pag .page-item:not(:first-child):not(:last-child) {
+            display: none;
+        }
+    }
+}

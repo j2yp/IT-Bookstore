@@ -9,3 +9,14 @@
         margin-bottom: 40px;
     }
 }
+
+@media (max-width: 576px) {
+    .loader-book-list {
+        &__content {
+            justify-content: space-around;
+            row-gap: 20px;
+
+            margin-bottom: 20px;
+        }
+    }
+}

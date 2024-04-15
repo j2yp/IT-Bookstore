@@ -11,6 +11,7 @@ import {
 import { AddToCart } from 'features/cart'
 import { IBookPreview } from 'shared/api/book'
 import { SLIDES } from 'shared/consts'
+import { useMediaQuery } from 'shared/lib/media/useMediaQuery'
 import { useAppDispatch, useAppSelector } from 'shared/lib/store'
 import { Carousel } from 'shared/ui/carousel'
 import { LoaderCarousel } from 'shared/ui/loaders/loaderСarousel'
@@ -21,6 +22,8 @@ import './homePage.scss'
 
 const responsive: Responsive = {
     1024: { items: 5 },
+    768: { items: 4 },
+    576: { items: 1 },
 }
 
 export const HomePage = () => {
@@ -33,6 +36,7 @@ export const HomePage = () => {
     const dispatch = useAppDispatch()
 
     const { showBoundary } = useErrorBoundary()
+    const matches = useMediaQuery('(max-width: 576px)')
 
     useEffect(() => {
         TITLE_OF_BOOK_CATEGOTIES.forEach((title) =>
@@ -80,7 +84,8 @@ export const HomePage = () => {
                     autoWidth
                     disableDotsControls
                     responsive={responsive}
-                    countVisibleElements={5}>
+                    countVisibleElements={5}
+                    className='home-page__carousel'>
                     {renderBooks(categories[titleCategory], titleCategory)}
                 </Carousel>
             </ProductСategory>
@@ -100,7 +105,7 @@ export const HomePage = () => {
     if (loading)
         return (
             <>
-                <LoaderCarousel />
+                {!matches && <LoaderCarousel />}
                 {loaderCategories}
             </>
         )

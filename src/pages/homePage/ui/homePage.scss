@@ -17,3 +17,17 @@
         margin: 0 auto;
     }
 }
+
+@media (max-width: 1200px) {
+    .home-page {
+        &__category {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        &__carousel {
+            margin: 15px -15px 15px 0;
+        }
+    }
+}

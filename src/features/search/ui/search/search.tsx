@@ -74,9 +74,9 @@ export const Search: FC<ISearch> = (props) => {
         }
         if (valueSearch.length < 3) {
             return (
-                <span className='search__info'>
+                <div className='search__info'>
                     Enter search terms, at least 3 characters
-                </span>
+                </div>
             )
         }
         return (

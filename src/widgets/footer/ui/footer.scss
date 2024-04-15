@@ -33,3 +33,12 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .footer {
+        &__wrapper {
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+    }
+}

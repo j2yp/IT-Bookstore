@@ -56,7 +56,6 @@ export const LoaderBookDescription = () => {
 
                     <div className='loader-book-description__wrapper-button'>
                         <Skeleton className='loader-book-description__button' />
-                        <Skeleton className='loader-book-description__button' />
                     </div>
                 </div>
 

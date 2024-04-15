@@ -30,7 +30,8 @@
     "react-responsive-pagination": "^2.2.3",
     "react-router-dom": "^6.17.0",
     "react-toastify": "^10.0.4",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "use-breakpoint": "^4.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -44,11 +45,11 @@
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "gh-pages": "^6.1.1",
     "prettier": "3.0.3",
     "sass": "^1.69.4",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
-    "vite-plugin-svgr": "^4.1.0",
-    "gh-pages": "^6.1.1"
+    "vite-plugin-svgr": "^4.1.0"
   }
 }

@@ -20,11 +20,12 @@
 
     &__col {
         border-bottom: 1px solid var(--border);
+        vertical-align: middle;
 
         padding: 15px 0;
     }
 
-    &__col-title {
+    &__col-link {
         display: flex;
 
         &:hover {
@@ -38,6 +39,10 @@
 
     &__col-total {
         padding-top: 15px;
+    }
+
+    &__col-quantity {
+        text-wrap: nowrap;
     }
 
     &__title {
@@ -114,5 +119,33 @@
         color: var(--text-primary);
 
         margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart {
+        thead {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .cart {
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        &__col {
+            border: none;
+        }
+
+        &__col-title {
+            width: 100%;
+        }
     }
 }

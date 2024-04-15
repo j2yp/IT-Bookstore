@@ -23,3 +23,31 @@
         height: 28px;
     }
 }
+
+@media (max-width: 576px) {
+    .loader-book-preview {
+        &__wrapper-img {
+            height: 210px;
+            width: 160px;
+
+            padding: 0;
+        }
+
+        &__img {
+            height: 210px;
+            width: 160px;
+
+            margin: 0;
+        }
+
+        &__subtitle {
+            height: 11px;
+            margin-bottom: 5px;
+        }
+
+        &__price {
+            width: 100px;
+            height: 28px;
+        }
+    }
+}

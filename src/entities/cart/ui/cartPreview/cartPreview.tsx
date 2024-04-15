@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { DropdownCartItem, selectCart } from 'entities/cart'
 import Bag from 'shared/assets/icons/bag.svg?react'
+import { useMediaQuery } from 'shared/lib/media/useMediaQuery'
 import { fromPriceToNumber } from 'shared/lib/price'
 import { useAppSelector } from 'shared/lib/store'
 import { Button } from 'shared/ui/button'
@@ -12,12 +13,15 @@ import { IconButton } from 'shared/ui/iconButton'
 import './cartPreview.scss'
 
 interface ICartPreview {
+    /** The function is executed when you click on the label. */
+    readonly onClick?: () => void
     /** Additional styles. */
     readonly className?: string
 }
 
 export const CartPreview: FC<ICartPreview> = (props) => {
-    const { className } = props
+    const { onClick, className } = props
+    const matches = useMediaQuery('(max-width: 768px)')
 
     const cart = useAppSelector(selectCart)
 
@@ -66,12 +70,14 @@ export const CartPreview: FC<ICartPreview> = (props) => {
     return (
         <div className={clsx('cart-preview', className)}>
             <Dropdown
+                isOpen={matches ? false : undefined}
                 isArrow
                 labelElement={
                     <IconButton
                         Icon={Bag}
                         counterTheme='red'
                         counterValue={totalCountItems}
+                        onClick={onClick}
                     />
                 }
                 content={renderContent}
