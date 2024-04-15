@@ -17,7 +17,7 @@
     &__info {
         color: var(--text-primary);
         font-size: 14px;
-        margin: 0 15px;
+        margin: 5px 15px;
     }
 
     &__loading {
@@ -42,6 +42,7 @@
         border: none;
 
         padding: 10px;
+        cursor: pointer;
     }
 
     &__button-more:hover {

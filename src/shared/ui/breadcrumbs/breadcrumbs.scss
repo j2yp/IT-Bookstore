@@ -44,3 +44,13 @@
         content: '';
     }
 }
+
+@media (max-width: 576px) {
+    .breadcrumbs {
+        padding: 15px 0;
+
+        &__item {
+            max-width: 150px;
+        }
+    }
+}

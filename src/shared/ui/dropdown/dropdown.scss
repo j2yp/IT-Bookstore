@@ -13,6 +13,11 @@
         z-index: 100;
     }
 
+    &__label {
+        background: transparent;
+        border: none;
+    }
+
     &__content {
         position: relative;
 

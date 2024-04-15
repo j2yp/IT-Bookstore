@@ -37,7 +37,7 @@
 
         &_hidden {
             opacity: 0;
-            height: 0;
+            height: 0 !important;
         }
     }
 
@@ -85,6 +85,20 @@
         .book-preview__overlay {
             height: 170px;
             padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .book-preview {
+        max-width: 160px;
+
+        &__image {
+            height: 210px;
+        }
+
+        &__image-loader {
+            padding: 5px;
         }
     }
 }

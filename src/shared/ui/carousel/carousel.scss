@@ -38,3 +38,23 @@
         margin: -40px 0 0;
     }
 }
+
+@media (max-width: 1400px) {
+    .carousel {
+        .btn-prev {
+            left: -20px;
+        }
+        .btn-next {
+            right: -20px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel {
+        .btn-prev,
+        .btn-next {
+            display: none;
+        }
+    }
+}

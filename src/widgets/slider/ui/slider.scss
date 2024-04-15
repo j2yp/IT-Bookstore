@@ -18,3 +18,9 @@
         top: 40%;
     }
 }
+
+@media (max-width: 576px) {
+    .slider {
+        display: none;
+    }
+}

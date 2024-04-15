@@ -1,4 +1,3 @@
-import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {
     changeNumItemsInCart,
@@ -7,7 +6,7 @@ import {
     selectCart,
 } from 'entities/cart'
 import { fromNumberToPrice, fromPriceToNumber } from 'shared/lib/price'
-import { useAppSelector } from 'shared/lib/store'
+import { useAppDispatch, useAppSelector } from 'shared/lib/store'
 import { Breadcrumbs } from 'shared/ui/breadcrumbs'
 import { Price } from 'shared/ui/price'
 
@@ -15,7 +14,7 @@ import './cart.scss'
 
 export const Cart = () => {
     const cart = useAppSelector<ICartItem[]>(selectCart)
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const totalCost = cart.reduce((sum: number, current: ICartItem) => {
         return +(
@@ -49,8 +48,8 @@ export const Cart = () => {
     const renderContent = () => {
         return cart.map((item) => (
             <tr key={item.isbn13}>
-                <td className='cart__col'>
-                    <Link to={item.url} className='cart__col-title'>
+                <td className='cart__col cart__col-title'>
+                    <Link to={item.url} className='cart__col-link'>
                         <img
                             src={item.image}
                             className='cart__img'
@@ -63,7 +62,7 @@ export const Cart = () => {
                     <Price className='cart__price'>{item.price}</Price>
                 </td>
 
-                <td className='cart__col'>
+                <td className='cart__col cart__col-quantity'>
                     <button
                         type='button'
                         disabled={item.quantity === 1}
@@ -108,6 +107,7 @@ export const Cart = () => {
                             <th scope='col' className='cart__col-header'>
                                 Product
                             </th>
+
                             <th scope='col' className='cart__col-header'>
                                 Price
                             </th>

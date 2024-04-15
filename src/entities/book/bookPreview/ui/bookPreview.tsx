@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { IBookPreview } from 'shared/api/book'
 import defaultImage from 'shared/assets/images/defaultImage.png'
 import { PRICE_OF_FREE_BOOK } from 'shared/consts'
+import { useMediaQuery } from 'shared/lib/media/useMediaQuery'
 import { LoaderImage } from 'shared/ui/loaders/loaderImage'
 import { Price } from 'shared/ui/price'
 
@@ -26,8 +27,11 @@ export const BookPreview: FC<IBookPreviewProps> = (props) => {
     } = props
 
     const [loadingImage, setLoadingImage] = useState(true)
+    const matches = useMediaQuery('(max-width: 576px)')
 
-    const LINK_TO_BOOK_DESCRIPTION = `/books/description/${isbn13}`
+    const LinkToBookDescription = `/books/description/${isbn13}`
+    const ImageLoaderWidth = matches ? 160 : 250
+    const ImageLoaderHeight = matches ? 210 : 290
 
     const onLoadedImage = (): void => {
         setLoadingImage(false)
@@ -36,7 +40,7 @@ export const BookPreview: FC<IBookPreviewProps> = (props) => {
     const renderOverlay = (): JSX.Element => (
         <div className='book-preview__overlay'>
             <Price className='book-preview__price'>{price}</Price>
-            <Link to={LINK_TO_BOOK_DESCRIPTION}>
+            <Link to={LinkToBookDescription}>
                 <h4 className='book-preview__title'>{title}</h4>
                 <span className='book-preview__author'>{subtitle}</span>
             </Link>
@@ -53,9 +57,13 @@ export const BookPreview: FC<IBookPreviewProps> = (props) => {
                 )}
             </div>
 
-            <Link to={LINK_TO_BOOK_DESCRIPTION}>
+            <Link to={LinkToBookDescription}>
                 {loadingImage && (
-                    <LoaderImage className='book-preview__image-loader' />
+                    <LoaderImage
+                        width={ImageLoaderWidth}
+                        height={ImageLoaderHeight}
+                        className='book-preview__image-loader'
+                    />
                 )}
                 <img
                     src={image}
