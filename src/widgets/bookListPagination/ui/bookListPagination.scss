@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .book-list-pagination {
     &__content {
         display: flex;
@@ -49,7 +51,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: breakpoints.$sm) {
     .book-list-pagination {
         &__content {
             row-gap: 15px;

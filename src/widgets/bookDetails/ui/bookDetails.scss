@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .book-details {
     color: var(--text-primary);
 
@@ -153,7 +155,7 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: breakpoints.$lg) {
     .book-details {
         &__content {
             flex-wrap: wrap;
@@ -177,7 +179,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: breakpoints.$md) {
     .book-details {
         &__content {
             flex-wrap: wrap;

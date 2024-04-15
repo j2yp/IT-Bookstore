@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .loader-book-list {
     &__content {
         display: flex;
@@ -10,7 +12,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: breakpoints.$sm) {
     .loader-book-list {
         &__content {
             justify-content: space-around;

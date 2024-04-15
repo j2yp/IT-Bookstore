@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { DropdownCartItem, selectCart } from 'entities/cart'
 import Bag from 'shared/assets/icons/bag.svg?react'
+import { MAX_WIDTH__MD } from 'shared/consts'
 import { useMediaQuery } from 'shared/lib/media/useMediaQuery'
 import { fromPriceToNumber } from 'shared/lib/price'
 import { useAppSelector } from 'shared/lib/store'
@@ -21,7 +22,7 @@ interface ICartPreview {
 
 export const CartPreview: FC<ICartPreview> = (props) => {
     const { onClick, className } = props
-    const matches = useMediaQuery('(max-width: 768px)')
+    const matches = useMediaQuery(MAX_WIDTH__MD)
 
     const cart = useAppSelector(selectCart)
 

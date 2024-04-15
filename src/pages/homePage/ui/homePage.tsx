@@ -10,7 +10,7 @@ import {
 } from 'entities/categoryPreview'
 import { AddToCart } from 'features/cart'
 import { IBookPreview } from 'shared/api/book'
-import { SLIDES } from 'shared/consts'
+import { MAX_WIDTH_SM, SLIDES } from 'shared/consts'
 import { useMediaQuery } from 'shared/lib/media/useMediaQuery'
 import { useAppDispatch, useAppSelector } from 'shared/lib/store'
 import { Carousel } from 'shared/ui/carousel'
@@ -36,7 +36,7 @@ export const HomePage = () => {
     const dispatch = useAppDispatch()
 
     const { showBoundary } = useErrorBoundary()
-    const matches = useMediaQuery('(max-width: 576px)')
+    const matches = useMediaQuery(MAX_WIDTH_SM)
 
     useEffect(() => {
         TITLE_OF_BOOK_CATEGOTIES.forEach((title) =>

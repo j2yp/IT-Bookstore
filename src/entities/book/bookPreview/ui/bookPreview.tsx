@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { IBookPreview } from 'shared/api/book'
 import defaultImage from 'shared/assets/images/defaultImage.png'
-import { PRICE_OF_FREE_BOOK } from 'shared/consts'
+import { MAX_WIDTH__MD, PRICE_OF_FREE_BOOK } from 'shared/consts'
 import { useMediaQuery } from 'shared/lib/media/useMediaQuery'
 import { LoaderImage } from 'shared/ui/loaders/loaderImage'
 import { Price } from 'shared/ui/price'
@@ -27,7 +27,7 @@ export const BookPreview: FC<IBookPreviewProps> = (props) => {
     } = props
 
     const [loadingImage, setLoadingImage] = useState(true)
-    const matches = useMediaQuery('(max-width: 576px)')
+    const matches = useMediaQuery(MAX_WIDTH__MD)
 
     const LinkToBookDescription = `/books/description/${isbn13}`
     const ImageLoaderWidth = matches ? 160 : 250

@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .footer {
     position: relative;
     width: 100%;
@@ -34,7 +36,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: breakpoints.$sm) {
     .footer {
         &__wrapper {
             flex-wrap: wrap;

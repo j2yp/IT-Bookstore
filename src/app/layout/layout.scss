@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .layout {
     background: var(--white);
 
@@ -188,7 +190,7 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: breakpoints.$lg) {
     .layout {
         &__navigation-menu-btn-wrapper {
             display: none;
@@ -196,7 +198,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: breakpoints.$md) and (max-width: breakpoints.$lg) {
     .layout {
         &__navigation-menu-link {
             font-size: 12px;
@@ -208,7 +210,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: breakpoints.$md) {
     .layout {
         &__navigation-menu {
             position: relative;

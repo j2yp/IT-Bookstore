@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .book-preview {
     max-width: 240px;
     position: relative;
@@ -89,7 +91,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: breakpoints.$sm) {
     .book-preview {
         max-width: 160px;
 

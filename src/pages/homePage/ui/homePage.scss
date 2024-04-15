@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .home-page {
     &__item {
         padding-right: 8px;
@@ -18,7 +20,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: breakpoints.$xl) {
     .home-page {
         &__category {
             margin-top: 15px;

@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .breadcrumbs {
     font-size: 14px;
     display: flex;
@@ -45,7 +47,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: breakpoints.$sm) {
     .breadcrumbs {
         padding: 15px 0;
 

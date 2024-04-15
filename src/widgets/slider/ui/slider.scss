@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .slider {
     &__wrapper {
         max-width: 100%;
@@ -19,7 +21,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: breakpoints.$sm) {
     .slider {
         display: none;
     }

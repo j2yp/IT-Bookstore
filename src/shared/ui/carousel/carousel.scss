@@ -1,3 +1,5 @@
+@use 'src/app/styles/breakpoints';
+
 .carousel {
     margin: 30px auto;
     position: relative;
@@ -39,7 +41,7 @@
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: breakpoints.$xxl) {
     .carousel {
         .btn-prev {
             left: -20px;
@@ -50,7 +52,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: breakpoints.$xl) {
     .carousel {
         .btn-prev,
         .btn-next {
